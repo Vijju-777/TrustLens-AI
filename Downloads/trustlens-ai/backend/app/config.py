@@ -13,7 +13,7 @@ class Settings:
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
     MONGODB_URI: str = os.getenv("MONGODB_URI", "")
     ALLOWED_ORIGINS: list[str] = os.getenv(
-        "ALLOWED_ORIGINS", "http://localhost:3000"
+        "ALLOWED_ORIGINS", "http://localhost:3000,https://trust-lens-ai-seven.vercel.app"
     ).split(",")
     GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
 
