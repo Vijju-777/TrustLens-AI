@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-light: #f4f8ff;
+  --bg-dark: #0a0e1a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[var(--bg-light)] dark:bg-[var(--bg-dark)] text-slate-800 dark:text-slate-100;
+  transition: background-color 0.3s ease;
+}
+
+.glass {
+  @apply bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-glass;
+}
+
+.glass-card {
+  @apply glass rounded-xl2 p-6 md:p-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-6 py-3 font-medium text-white shadow-lg shadow-brand-500/30 transition hover:bg-brand-600 hover:shadow-brand-600/40 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-200 dark:border-white/20 bg-white/70 dark:bg-white/5 px-6 py-3 font-medium text-brand-700 dark:text-brand-200 transition hover:bg-brand-50 dark:hover:bg-white/10 active:scale-95;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-200 dark:bg-white/10 rounded-full;
+}
